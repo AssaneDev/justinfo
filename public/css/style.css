@@ -1,0 +1,232 @@
+:root{
+    --primary-color:#03045e;
+    --dark-color:#023e8a;
+    --light-color:#0077b6;
+    --color-txt:#000814;
+    --color-txt-light:#495057;
+    --bg-color-light:#0096c7;
+    --bg-color-dark:#6c757d;
+    --border : solid 1px #eee;
+    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --Geologica:'Geologica', sans-serif;
+    --Merriweather: 'Merriweather', serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+  }
+body{
+    font-family: var(--Merriweather);
+    font-size: 1.6rem;
+    
+}
+.btn{
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    font-family: var(--Geologica);
+    font-size: 1.3rem;
+    border-radius: 8px;
+    border: var(--border);
+}
+.btn-primary{
+    background-color: var(--color-txt-light);
+    color: white;
+}
+
+.btn-secondary{
+    background-color: var(--light-color);
+    color: white;
+}
+.small{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+a{
+    color: inherit;
+    font-style: None;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5{
+     margin-bottom: 1rem;
+}
+.text-error{
+    background-color: red;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-family: var(--Merriweather);
+    padding: 0.5rem;
+}
+.small-text{
+    font-size: 1.2rem;
+}
+/* Container */
+.container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.content{
+    max-width: 150rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    align-items: center;
+ 
+}
+
+/* Header */
+.header-mobile{
+    display: none;
+}
+header{
+    background-color: var(--bg-color-light);
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+header .logo{
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+.header-nav{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    text-decoration: none;
+}
+.header-nav-mobile{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: pink;
+}
+.show{
+    display: block;
+}
+.header-nav-mobile li{
+    padding: 1px;
+}
+
+.header-nav li{
+  padding: 1.3rem;
+  border-radius: 3px ;
+}
+.header-nav li:hover{
+  background-color: var(--primary-color);
+  color: #ffff;
+  transition: background-color 0.5s;
+}
+li.header-profile{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+    color: white;
+}
+li.header-profile:hover{
+    border-radius: 50%;
+    background-color: var(--primary-color);
+  
+}
+.active{
+  background-color: var(--primary-color);
+  color: #ffff;
+
+}
+.block{
+    display: flex;
+    background-color: #ffff;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    margin: 2rem 0;
+    
+}
+.overflow{
+    overflow: hidden;
+}
+
+/* Formulaire */
+
+.form-container {
+    width: 50rem;
+    padding: 3rem;
+}
+.form-container h1 {
+    
+    padding: 1rem 0;
+}
+.form-controle{
+    display: flex;
+    flex-flow: column;
+    padding: 0.5rem;
+}
+.form-controle label{
+    padding: 0.5rem;
+}
+.form-controle input{
+    border: var(--border);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1.3rem;
+}
+.form-controle select{
+       border: var(--border);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1.3rem;
+}
+.form-controle textarea{
+       border: var(--border);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1.3rem;
+    min-height: 20rem;
+}
+
+/* Footer */
+footer{
+    background: var(--bg-color-dark);
+    color: #ffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+@media only screen and (max-width:800px){
+    .header-nav{
+        display: none;
+    }
+    .header-mobile{
+        display: block;
+    }
+    .form-container {
+        width: 100%;
+      }
+      .content  {
+        padding:1rem;
+      }
+      .form-container {
+      width: 100%;
+    }
+    
+}
